@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NavigationController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9e1a8" height="750.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0" />
+      <Pane fx:id="decor" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d5e05880" height="25.0" layoutX="500.0" layoutY="700.0" rotate="-15.0" stroke="TRANSPARENT" strokeType="INSIDE" width="80.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb6b280" height="25.0" rotate="10.0" stroke="TRANSPARENT" strokeType="INSIDE" width="90.0" x="10.0" y="20.0" />
+            <SVGPath content="M 0,0 C 50,100 150,-100 200,0" fill="TRANSPARENT" layoutX="50.0" layoutY="600.0" rotate="-20.0" stroke="#ffb6b280" strokeWidth="12.0" />
+            <Polygon fill="#bcd7eb33" stroke="TRANSPARENT" strokeType="INSIDE" translateX="300.0" translateY="375.0">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+            </Polygon>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="730.0" stroke="#f6d178" strokeType="INSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 15 10;" width="580.0" />
+      <VBox alignment="TOP_CENTER" maxHeight="750.0" maxWidth="600.0" prefHeight="750.0" prefWidth="100.0" spacing="10.0" StackPane.alignment="TOP_CENTER">
+         <children>
+            <Text fill="#d1828a" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick a page to color!">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="38.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="4.0" stroke="#ff8c96b2" strokeLineCap="ROUND" strokeWidth="4.0" style="-fx-stroke-dash-array: 2 12;" width="340.0" />
+            <GridPane alignment="CENTER" hgap="30.0" prefHeight="588.0" prefWidth="600.0" vgap="30.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane fx:id="cardOne" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="240.0" rotate="-2.5" style="-fx-cursor: hand;" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b4e51" height="180.0" stroke="#694c50" strokeType="INSIDE" strokeWidth="3.0" width="240.0">
+                           <effect>
+                              <DropShadow offsetX="5.0" offsetY="5.0">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Rectangle>
+                        <ImageView fx:id="imageOne" fitHeight="174.0" fitWidth="234.0" pickOnBounds="true" />
+                        <Text fx:id="numText1" fill="#6b4e51e5" strokeType="OUTSIDE" strokeWidth="0.0" text="1" translateX="15.0" translateY="15.0" StackPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="90.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="label1" fill="#6b4e51" strokeType="OUTSIDE" strokeWidth="0.0" text="FLOWERS" translateX="-15.0" translateY="-8.0" StackPane.alignment="BOTTOM_RIGHT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="selectOneButton" mnemonicParsing="false" onAction="#handlePageSelection" opacity="0.0" prefHeight="180.0" prefWidth="240.0" StackPane.alignment="BOTTOM_CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="cardTwo" layoutX="10.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="240.0" rotate="2.0" style="-fx-cursor: hand;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b4e51" height="180.0" stroke="#694c50" strokeType="INSIDE" strokeWidth="3.0" width="240.0">
+                           <effect>
+                              <DropShadow offsetX="5.0" offsetY="5.0">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Rectangle>
+                        <ImageView fx:id="imageTwo" fitHeight="174.0" fitWidth="234.0" pickOnBounds="true" />
+                        <Text fx:id="numText2" fill="#6b4e51e5" strokeType="OUTSIDE" strokeWidth="0.0" text="2" translateX="15.0" translateY="15.0" StackPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="90.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="label2" fill="#6b4e51" strokeType="OUTSIDE" strokeWidth="0.0" text="NATURE" translateX="-15.0" translateY="-8.0" StackPane.alignment="BOTTOM_RIGHT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="selectTwoButton" mnemonicParsing="false" onAction="#handlePageSelection" opacity="0.0" prefHeight="180.0" prefWidth="240.0" rotate="2.0" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="cardThree" layoutX="348.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="240.0" rotate="1.8" style="-fx-cursor: hand;" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b4e51" height="180.0" stroke="#694c50" strokeType="INSIDE" strokeWidth="3.0" width="240.0">
+                           <effect>
+                              <DropShadow offsetX="5.0" offsetY="5.0">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Rectangle>
+                        <ImageView fx:id="imageThree" fitHeight="174.0" fitWidth="234.0" pickOnBounds="true" />
+                        <Text fx:id="numText3" fill="#6b4e51e5" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateX="15.0" translateY="15.0" StackPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="90.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="label3" fill="#6b4e51" strokeType="OUTSIDE" strokeWidth="0.0" text="ANIMALS" translateX="-15.0" translateY="-8.0" StackPane.alignment="BOTTOM_RIGHT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="selectThreeButton" mnemonicParsing="false" onAction="#handlePageSelection" opacity="0.0" prefHeight="180.0" prefWidth="240.0" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="cardFour" layoutX="55.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="240.0" rotate="-1.5" style="-fx-cursor: hand;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b4e51" height="180.0" stroke="#694c50" strokeType="INSIDE" strokeWidth="3.0" width="240.0">
+                           <effect>
+                              <DropShadow offsetX="5.0" offsetY="5.0">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Rectangle>
+                        <ImageView fx:id="imageFour" fitHeight="174.0" fitWidth="234.0" pickOnBounds="true" />
+                        <Text fx:id="numText4" fill="#6b4e51e5" strokeType="OUTSIDE" strokeWidth="0.0" text="4" translateX="15.0" translateY="15.0" StackPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="90.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="label4" fill="#6b4e51" strokeType="OUTSIDE" strokeWidth="0.0" text="HOUSES" translateX="-15.0" translateY="-8.0" StackPane.alignment="BOTTOM_RIGHT">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="selectFourButton" mnemonicParsing="false" onAction="#handlePageSelection" opacity="0.0" prefHeight="180.0" prefWidth="240.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="100.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
